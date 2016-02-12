@@ -10,6 +10,9 @@
 	border-style: solid;
 	border: 3px;
 	background-color: grey;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
 }
 h1 {
 	font-size: 3em;
@@ -21,7 +24,7 @@ nav {
 	font-size: 1.5em;
 	background-color: grey;
 	opacity: 0.75;
-	margin: 15px 0 15px 0;
+	margin: 0 0 25px 0;
 	padding: 15px 0 15px 0;
 	width: 100%;
 }
@@ -56,18 +59,30 @@ a:hover {
 	padding: 0;
 }
 .sticky {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  border-top: 0;
-  opacity: 0.60;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-top: 0;
+	opacity: 0.60;
 }
 .sticky:hover {
-  opacity: 1;
+	opacity: 1;
 }
 nav a {
 	margin: 5px 15px 5px 15px;
 	padding: 5px 15px 5px 15px;
+}
+p {
+	width: 100%;
+}
+img {
+	margin: auto;
+	display: block;
+}
+.pic {
+	margin: auto;
+	align-self: center;
+	align-items: center;
 }

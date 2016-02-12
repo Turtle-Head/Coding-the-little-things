@@ -6,41 +6,44 @@ $(function(){
 	var loader = function( filename ) {
 		jQuery.get(filename, function(data) {
    			$('#article').html(data);
+			$('.content').hide();
+			$('#article').show(true);
 		});
+
 	};
 
 	var Article = [
     	{
-        	'id': '1',
-			'title': 'Test Text',
-        	'articleSrc': 'assets/textTest.txt',
-        	'date': 'Some Date'
-    	},
-		{
-        	'id': '2',
-			'title': 'Test 2',
-        	'articleSrc': 'assets/test2.txt',
-        	'date': 'Some Date'
-    	}
+			'id': '1',
+			'title': 'About Me',
+			'articleSrc': 'assets/aboutMe.html',
+			'date': 'Some date'
+		}
 	];
 
 	var View = function() {
 		var output;
 		for ( var x = 0; x < Article.length; x++) {
-			output = '<a href="#" id=' + Article[x].id + ' class="linky">' + Article[x].title + '</a>';
+			output = '<a href="#" id=' + Article[x].id + ' class="linky" target="#article">' + Article[x].title + '</a>';
 			$('nav').append( output );
 		}
-
 	};
 
 	View();
 
 	$(".linky").on("click", function(){
-		for(var i = 0; i < Article.length; i++) {
-			if (Number(Article[i].id) === Number(this.id)) {
-				loader(Article[i].articleSrc);
-			} else {
-				$('content').text('File not found !!!');
+		if(this.id === 'home') {
+			$('.content').hide();
+			$('#welcome').show(true);
+		} else {
+			for(var i = 0; i < Article.length; i++) {
+				if (Number(Article[i].id) === Number(this.id)) {
+					loader(Article[i].articleSrc);
+				} else {
+					$('#article').text('File not found !!!');
+					$('.content').hide();
+					$('#article').show(true);
+				}
 			}
 		}
 	});
@@ -58,5 +61,5 @@ $(function(){
 	$(window).scroll(function() {
 		stickyNav();
 	});
-
+	$('#article').hide();
 });
