@@ -2,14 +2,14 @@
 	white-space: pre;
 	font-size: 1.25em;
 	margin: auto;
-    width: 60%;
+  width: 60%;
 	padding: 25px;
 	text-align: justify;
 	border-color: black;
 	border-radius: 15px;
 	border-style: solid;
 	border: 3px;
-	background-color: grey;
+	background-color: white;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	white-space: pre-wrap;
@@ -22,8 +22,8 @@ h1 {
 nav {
 	text-align: center;
 	font-size: 1.5em;
-	background-color: grey;
-	opacity: 0.75;
+	background-color: #33334d;
+	opacity: 1;
 	margin: 0 0 25px 0;
 	padding: 15px 0 15px 0;
 	width: 100%;
@@ -47,8 +47,8 @@ a:hover {
 	width: auto;
 	height: 50%;
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header {
 
@@ -58,6 +58,13 @@ a:hover {
 	margin: 0;
 	padding: 0;
 }
+.banner_div {
+	height: 200px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #33334d;
+}
 .sticky {
 	position: fixed;
 	width: 100%;
@@ -65,7 +72,7 @@ a:hover {
 	top: 0;
 	z-index: 100;
 	border-top: 0;
-	opacity: 0.60;
+	opacity: 0.95;
 }
 .sticky:hover {
 	opacity: 1;
@@ -76,6 +83,14 @@ nav a {
 }
 p {
 	width: 100%;
+	background-color: white;
+}
+.content a {
+	font-weight: bold;
+	color: #33334d;
+}
+.content a:hover {
+	color: red;
 }
 img {
 	margin: auto;
@@ -85,4 +100,30 @@ img {
 	margin: auto;
 	align-self: center;
 	align-items: center;
+}
+.loc {
+	color: white;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #33334d;
+  background-image: linear-gradient(to right, #33334d, #ffffff, #33334d);
+}
+.code_box {
+	border-width: thin;
+	border: 1px dashed black;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2px 2px 2px 2px;
+}
+.icn {
+	border-radius: 50px;
+	background-color: white;
+	padding: 25px;
+	margin: 15px;
+	align: left;
+	filter: blur(75px);
 }
