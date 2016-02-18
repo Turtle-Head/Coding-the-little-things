@@ -30,7 +30,7 @@ $(function(){
 	var View = function() {
 		var output;
 		for ( var x = 0; x < Article.length; x++) {
-			output = '<a href="#" id=' + Article[x].id + ' class="linky" target="#article">' + Article[x].title + '</a>';
+			output = '<a href="#" id=' + Article[x].id + ' class="linky">' + Article[x].title + '</a>';
 			$('nav').append( output );
 		}
 	};
