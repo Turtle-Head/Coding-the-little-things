@@ -23,6 +23,12 @@ nav {
 	text-align: center;
 	font-size: 1.5em;
 	background-color: #33334d;
+	background-image:
+	-webkit-linear-gradient(left, #4976C9, #33334d);
+	background-image:
+	-o-linear-gradient(left, #4976C9, #33334d);
+	background-image:
+	linear-gradient(to right, #4976C9, #33334d);
 	opacity: 1;
 	margin: 0 0 25px 0;
 	padding: 15px 0 15px 0;
@@ -64,6 +70,12 @@ a:hover {
 	margin: 0;
 	padding: 0;
 	background-color: #33334d;
+	background-image:
+	-webkit-linear-gradient(left, #4976C9, #33334d);
+	background-image:
+	-o-linear-gradient(left, #4976C9, #33334d);
+	background-image:
+	linear-gradient(to right, #4976C9, #33334d);
 }
 .sticky {
 	position: fixed;
@@ -120,10 +132,14 @@ hr {
 	padding: 2px 2px 2px 2px;
 }
 .icn {
-	border-radius: 50px;
+	border-radius: 70px 40px;
 	background-color: white;
 	padding: 25px;
-	margin: 15px;
-	align: left;
+	margin-left: auto;
+	margin-right: auto;
+	align: center;
 	filter: blur(75px);
+}
+.sl {
+	color: #33334d;
 }

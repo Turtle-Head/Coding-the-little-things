@@ -15,15 +15,15 @@ $(function(){
 
 	var Article = [
     {
+			'id': '2',
+			'title': 'A Simple Map',
+			'articleSrc': 'assets/googleAPI.html',
+			'date': '2016-2-17 16:30:00'
+		},{
 			'id': '1',
 			'title': 'About Me',
 			'articleSrc': 'assets/aboutMe.html',
 			'date': '2016-2-10 20:42:23'
-		},{
-			'id': '2',
-			'title': 'Getting Started With Google Maps',
-			'articleSrc': 'assets/googleAPI.html',
-			'date': '2016-2-17 16:30:00'
 		}
 	];
 
