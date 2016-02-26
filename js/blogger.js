@@ -3,27 +3,35 @@
 
 $(function(){
 
-	var loader = function( filename, title ) {
-		jQuery.get(filename, function(data) {
-   			$('#article').html(data);
-				$('.content').hide();
-				$('#loc').html('<h2>' + title + '</h2><hr width="50%" color="white">');
-				$('#article').show(true);
-		});
-
+	var loader = function( filename, title, type ) {
+		if (type) {
+			$('#article').html('<iframe id="if1" style="visibility:visible" src=' + filename + '></iframe>');
+			$('.content').hide();
+			$('#loc').html('<h2>' + title + '</h2><hr width="50%" color="white">');
+			$('#article').show(true);
+		}
 	};
 
 	var Article = [
-    {
+		{
+			'id': '3',
+			'title': 'Portfolio',
+			'articleSrc': 'http://turtle-head.github.io/Portfolio',
+			'date': '',
+			'local': true
+		},
+		{
 			'id': '2',
 			'title': 'A Simple Map',
 			'articleSrc': 'assets/googleAPI.html',
-			'date': '2016-2-17 16:30:00'
+			'date': '2016-2-17 16:30:00',
+			'local': true
 		},{
 			'id': '1',
 			'title': 'About Me',
 			'articleSrc': 'assets/aboutMe.html',
-			'date': '2016-2-10 20:42:23'
+			'date': '2016-2-10 20:42:23',
+			'local': true
 		}
 	];
 
@@ -45,8 +53,11 @@ $(function(){
 		} else {
 			for(var i = 0; i < Article.length; i++) {
 				if (Number(Article[i].id) === Number(this.id)) {
-					loader(Article[i].articleSrc, Article[i].title);
+						if (Article[i].local) {
+								loader(Article[i].articleSrc, Article[i].title, Article[i].type);
+						}
 				} else {
+					console.log(this.id);
 					$('#article').text('File not found !!!');
 					$('.content').hide();
 					$('#article').show(true);

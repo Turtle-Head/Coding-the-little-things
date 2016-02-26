@@ -69,6 +69,7 @@ a:hover {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	align: bottom;
 	background-color: #33334d;
 	background-image:
 	-webkit-linear-gradient(left, #4976C9, #33334d);
