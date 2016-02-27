@@ -144,3 +144,10 @@ hr {
 .sl {
 	color: #33334d;
 }
+.g-plusone {
+	text-align: center;
+	margin: 0 auto 0 auto;
+	display: block;
+	width: 50px;
+	align: center;
+}
