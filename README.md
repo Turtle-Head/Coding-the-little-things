@@ -1,3 +1,6 @@
+Author: James Fehr
+Email: fehr.james@gmail.com
+
 # Coding-the-little-things
 This started as an experiment, could I add pages dynamically based on links clicked?
 
