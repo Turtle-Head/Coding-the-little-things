@@ -151,3 +151,8 @@ hr {
 	width: 50px;
 	align: center;
 }
+.marketing {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 300;
+}
