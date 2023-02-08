@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <link rel="stylesheet" href="css/index.min.css">
 <script src="assets/keys.min.js"></script>
 <p width="80%">
@@ -34,3 +35,41 @@
   <h3>jf<h3>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU1MBm-deSlsKfb9bEDvmaahgfE2y6C0A&callback=initMap"></script>
 </p>
+=======
+<link rel="stylesheet" href="css/index.min.css">
+<script src="assets/keys.min.js"></script>
+<p width="80%">
+  <h2>Getting started with Google Maps</h2>
+  It is super easy to get started with Google Maps. The first thing to do is go over to <a href="https://developers.google.com/maps/documentation/javascript/" target="_blank">Google Maps Javascript API</a> and get a Key. You'll need the Key to do place searches and a few other things so it's best to have it handy before starting.<br>
+  To create a Google Maps data request you'll need jQuery for it's AJAX import method. The best way to get it is by using a CDN to keep the file up to date. You can find one at <a href="http://code.jquery.com/" target="_blank">code.jQuery.com</a>.<br>
+  In your html file create a map div.<br><br><div class="code_box">    &lt;div id="map"&gt;&lt;/map&gt;</div><br>
+  We need to access the Google Map server with their script. We also need to include the API key to tell Google who is asking for the data.
+  <div class="code_box">
+    &lt;script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"&gt;
+    &lt;/script&gt;
+  </div>
+  Next, in your javascript, you need a few things.
+  <div class="code_box"><p>
+    function initMap() {
+    // Create a map object and specify the DOM element for display.
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 34.397, lng: -115.644},
+        zoom: 6
+      });
+    }
+  </p></div><br>
+  This gets you a basic map, centered over the longitude and latitude location provided.
+  <style>
+    #map {
+      width: 100%;
+      height: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <div id="map"></div><br>
+  <h3>jf<h3>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU1MBm-deSlsKfb9bEDvmaahgfE2y6C0A&callback=initMap"></script>
+</p>
+>>>>>>> c5d94f3a1139e95209f2337b6b7e031c007030fa
